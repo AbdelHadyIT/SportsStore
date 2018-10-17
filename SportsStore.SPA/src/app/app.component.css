@@ -1,0 +1,10 @@
+.hello {
+    font-size: 2em;
+    background-color: darkslategray;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: black;
+    padding: 10px;
+    color: white;
+}

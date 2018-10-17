@@ -1,0 +1,66 @@
+<h2 class="hello">SportsStore</h2>
+
+<table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse table-responsive">
+    <thead class="thead-inverse|thead-default">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Supplier</th>
+            <th>Ratings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td scope="row">{{product?.name}}</td>
+            <td>{{product?.category}}</td>
+            <td>{{product?.description}}</td>
+            <td>{{product?.price}}</td>
+            <td>{{product?.supplier? || 'None'}}</td>
+            <td>{{product?.ratings?.length || 0}}</td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" name="" id="" class="btn btn-primary|secondary|success|danger|warning|info|light|dark|link m-1" btn-lg btn-block (click)="createProduct()">Create Product </button>
+<button type="button" name="" id="" class="btn btn-primary|secondary|success|danger|warning|info|light|dark|link m-1" btn-lg btn-block (click)="createProductAndSupplier()">Create Product and Supplier</button>
+<!-- <table class="table table-sm table-striped">
+    <tr>
+        <th>Name</th>
+        <td>{{product?.name}}</td>
+    </tr>
+
+    <tr>
+        <th>Category</th>
+        <td>{{product?.category}}</td>
+    </tr>
+
+    <tr>
+        <th>Description</th>
+        <td>{{product?.description}}</td>
+    </tr>
+
+    <tr>
+        <th>price</th>
+        <td>{{product?.price}}</td>
+    </tr>
+    <tr>
+        <th colspan="2" class="bg-info">Supplier</th>
+    </tr>
+    <tr>
+        <th>name</th>
+        <td>{{product?.supplier?.name}}</td>
+    </tr>
+    <tr>
+        <th>city</th>
+        <td>{{product?.supplier?.city}}</td>
+    </tr>
+    <tr>
+        <th>state</th>
+        <td>{{product?.supplier?.state}}</td>
+    </tr>
+    <tr>
+        <th>products</th>
+        <td>{{product?.supplier?.products.length}}</td>
+    </tr>
+</table> -->
